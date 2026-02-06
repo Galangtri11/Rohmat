@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Portfolio - Rohmat Saepuloh</title>
+    <style>
+        :root {
+            --netflix-red: #E50914;
+            --netflix-black: #141414;
+            --netflix-grey: #808080;
+        }
+
+        body {
+            background-color: var(--netflix-black);
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--netflix-red);
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), 
+                        url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Placeholder background */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero h1 { font-size: 60px; margin-bottom: 10px; }
+        .hero-meta { margin-bottom: 20px; font-size: 18px; color: #46d369; font-weight: bold; }
+        .hero-desc { max-width: 600px; font-size: 1.2rem; line-height: 1.4; margin-bottom: 20px; }
+
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        .btn-play { background-color: white; color: black; }
+        .btn-info { background-color: rgba(109, 109, 110, 0.7); color: white; }
+
+        /* Row Section */
+        .row { margin: 30px 50px; }
+        .row h2 { font-size: 1.4rem; margin-bottom: 15px; }
+        .posters {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        .posters::-webkit-scrollbar { display: none; }
+
+        .card {
+            min-width: 200px;
+            height: 120px;
+            background-color: #2f2f2f;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            z-index: 2;
+            background-color: var(--netflix-red);
+        }
+
+        /* Info Badge */
+        .badge {
+            background-color: var(--netflix-red);
+            padding: 2px 5px;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        footer {
+            padding: 50px;
+            color: var(--netflix-grey);
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">ROHMATFLIX</a>
+    </nav>
+
+    <section class="hero">
+        <div class="badge">ORIGINAL PORTFOLIO</div>
+        <h1>ROHMAT SAEPULOH</h1>
+        <div class="hero-meta">
+            <span>2026</span> | <span>18+</span> | <span>3 Seasons (Education)</span>
+        </div>
+        <p class="hero-desc">
+            Saya adalah seorang pelajar yang memiliki minat untuk belajar hal baru, bertanggung jawab, dan mampu bekerja secara mandiri maupun dalam tim. Berbasis di Baleendah, Kabupaten Bandung.
+        </p>
+        <div>
+            <button class="btn btn-play" onclick="alert('Menghubungi: 082312847732')">▶ Hubungi</button>
+            <button class="btn btn-info" onclick="location.href='https://instagram.com/rhmatt.paul'">ⓘ Info Lanjut</button>
+        </div>
+    </section>
+
+    <div class="row">
+        <h2>Riwayat Pendidikan (Seasons)</h2>
+        <div class="posters">
+            <div class="card">SDN ANDIR 02<br>(Lulus 2020)</div>
+            <div class="card">SMPN 01 PAMEUNGPEUK<br>(Lulus 2023)</div>
+            <div class="card" style="border: 2px solid var(--netflix-red);">SMA KP BALEENDAH<br>(Lulus 2026)</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>Trending Now: Keahlian & Hobby</h2>
+        <div class="posters">
+            <div class="card">Bisa Bekerja Sama</div>
+            <div class="card">Mudah Akrab</div>
+            <div class="card">Bermain Game</div>
+            <div class="card">Membaca Komik</div>
+            <div class="card">Musik</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>Award Winning (Pengalaman)</h2>
+        <div class="posters">
+            <div class="card" style="min-width: 300px;">🏆 MASUK ATLIT NASIONAL</div>
+            <div class="card" style="min-width: 300px;">🥇 JUARA 1 PERTANDINGAN POPDA</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Kontak: 082312847732 | Alamat: Kp.sukawargi, Kel.andir, Kec.baleendah, Kab.Bandung</p>
+        <p>&copy; 2026 Rohmat Saepuloh. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
